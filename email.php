@@ -7,12 +7,12 @@ header("Content-Type:text/html; charset=utf-8");
  require 'PHPMailer/src/PHPMailer.php';
  require 'PHPMailer/src/SMTP.php';
 
- if(isset($_GET['submit']))
+ if(isset($_POST['submit']))
  {
-    $name = htmlentities($_GET['name']);
-    $email = htmlentities($_GET['email']);
-    $subject = htmlentities($_GET['subject']);
-    $message = htmlentities($_GET['message']);
+    $name = htmlentities($_POST['name']);
+    $email = htmlentities($_POST['email']);
+    $subject = htmlentities($_POST['subject']);
+    $message = htmlentities($_POST['message']);
 
     $mail = new PHPMailer(true);
     $mail->isSMTP();
