@@ -7,7 +7,7 @@ header("Content-Type:text/html; charset=utf-8");
  require 'PHPMailer/src/PHPMailer.php';
  require 'PHPMailer/src/SMTP.php';
 
- if(isset($_GET['submit']))
+ if(isset($_POST['submit']))
  {
     $name = htmlentities($_POST['name']);
     $email = htmlentities($_POST['email']);
